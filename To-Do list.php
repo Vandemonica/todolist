@@ -124,6 +124,7 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="shortcut icon" type="image/png" href="pict/logo 1.2.png">
     <title>To-Do List</title>
 </head>
@@ -144,7 +145,7 @@
         <div class="field">
             <input type="text" name="input" placeholder="Masukkan daftar yang akan dilakukan">
             <span class="masukan">
-                <button type="submit" class="masukBtn" name="masuk">Masukkan</button>
+                <button type="submit" onclick="tertambahkan()" class="masukBtn" name="masuk">Masukkan</button>
             </span>
         </div>
         <ul>
@@ -180,6 +181,15 @@
         $('.ikon').click(function(){
             $('.field').toggleClass("hide");
         });
+        function tertambahkan() {
+            Swal.fire({
+                position: 'top-start',
+                icon: 'success',
+                title: 'List Telah Ditambahkan',
+                showConfirmButton: false,
+                timer: 1200
+            })
+        }
     </script>
 </body>
 </html>
