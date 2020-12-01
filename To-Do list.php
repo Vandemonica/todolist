@@ -140,6 +140,7 @@
             if(isset($_POST["masuk"])){
                 $list = $_POST["input"];
                 mysqli_query($con,"INSERT INTO listtb(id,isi_list) VALUES(null,'$list')");
+                sleep(1);
             }
             ?>
         <div class="field">
