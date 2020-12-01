@@ -170,7 +170,7 @@
     <script>
         $('.masukan').click(function(){
             $('ul').append("<li><span><i class='fas fa-trash'></i></span>" + $('input').val() + "</li>");
-            //$('input').val(""); <--- this pecking piss of sheet cause input field to be null
+            //$('input').val(""); <--- this thingy cause the input field become null
         });
         $('ul').on("click", 'span', function(){
             $(this).parent().fadeOut(500,function(){
